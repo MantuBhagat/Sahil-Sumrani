@@ -1,6 +1,7 @@
 // src/pages/Contact.jsx
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   FiMail,
   FiPhone,
@@ -14,6 +15,7 @@ import {
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
+    number: "",
     email: "",
     message: "",
   });
@@ -80,12 +82,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-lg text-gray-800 font-semibold">Email</h3>
-                  <a
-                    href="mailto:officialsahilarora05@gmail.com"
+                  <Link
+                    to="mailto:officialsahilarora05@gmail.com"
                     className="text-gray-600 hover:text-blue-600"
                   >
                     officialsahilarora05@gmail.com
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -149,6 +151,21 @@ const Contact = () => {
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
+                  }
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Phone Number
+                </label>
+                <input
+                  type="number"
+                  required
+                  className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  value={formData.number}
+                  onChange={(e) =>
+                    setFormData({ ...formData, number: e.target.value })
                   }
                 />
               </div>

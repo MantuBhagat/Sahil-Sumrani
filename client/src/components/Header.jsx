@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="shadow-lg sticky top-0 backdrop-blur-xl dark:bg-slate-800 dark:text-white w-full z-50"
+      className="shadow-transparent shadow-lg sticky top-0 dark:bg-opacity-10 backdrop-blur-lg dark:bg-gradient-to-r from-slate-900 to-slate-800 dark:text-white w-full z-50"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -33,14 +33,17 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {/* Themes  */}
-
             {navLinks.map((link) => (
               <motion.div
-                key={link.path}
+                key={link.id}
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                className={`px-4 py-2 text-lg font-medium  transition-colors duration-300 `}
               >
+                <motion.div
+                  className="absolute "
+                  layoutId="underline"
+                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                />
                 <Link
                   to={link.path}
                   className="dark:text-white hover:text-blue-600 transition-colors"
@@ -52,7 +55,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex gap-4">
+          <div className="flex">
             <ThemeToggleButton />
 
             <button
@@ -82,7 +85,7 @@ const Header = () => {
               <motion.div key={link.path} whileHover={{ scale: 1.05 }}>
                 <Link
                   to={link.path}
-                  className="block py-2 text-white hover:text-blue-600"
+                  className="block py-2 text-gray-900 font-semibold hover:text-blue-600"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}

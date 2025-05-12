@@ -46,10 +46,10 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-slate-200 dark:bg-gradient-to-r from-slate-900 to-slate-700 text-gray-100 dark:text-gray-100">
+    <div className="bg-slate-100 dark:bg-gradient-to-r from-slate-900 to-slate-800 text-gray-100 dark:text-gray-100">
       {/* Hero Section */}
       <motion.section
-        className="px-4 md:px-8 lg:px-12 pt-20"
+        className="px-4 md:px-8 lg:px-12 pt-20 items-center"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -59,9 +59,9 @@ const Home = () => {
             className="text-center md:text-left"
             variants={itemVariants}
           >
-            <h1 className="text-4xl font-mono md:text-5xl  text-gray-800 dark:text-gray-100 mb-4">
+            <h1 className=" font-semibold  md:text-5xl text-4xl text-gray-800 dark:text-gray-100 mb-4">
               Transforming Ideas into
-              <span className="text-blue-600 dark:text-orange-500">
+              <span className="text-blue-600 font-bold dark:text-orange-500">
                 {" "}
                 Digital Reality
               </span>
@@ -70,15 +70,20 @@ const Home = () => {
               Full Stack Developer & Data Enthusiast with expertise in modern
               web technologies and data visualization solutions.
             </p>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <div className="flex flex-1 gap-4 items-center ">
               <Link
                 to="/projects"
-                className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-lg text-lg hover:bg-blue-700 transition-colors dark:bg-orange-500"
+                className="border-2 border-blue-500 text-white hover:scale-1 dark:border-orange-500 font-semibold   dark:text-white dark:hover:border-white dark:bg-orange-500  bg-blue-500 rounded-lg relative py-3 px-8"
               >
-                Explore Projects
-                <FiArrowRight className="ml-2" />
+                View My Works
               </Link>
-            </motion.div>
+              <Link
+                to="/resume-download"
+                className="border-2 border-gray-500 hover:scale-1 hover:border-blue-500  font-semibold dark:border-gray-200  dark:hover:border-orange-500 dark:hover:text-orange-500 dark:text-white text-gray-600 hover:text-blue-600 rounded-lg relative py-3 px-8"
+              >
+                Download Resume
+              </Link>
+            </div>
           </motion.div>
         </div>
       </motion.section>
@@ -116,26 +121,19 @@ const Home = () => {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-16 px-4 md:px-8 lg:px-12 bg-gray-50">
+      <section className="py-16 px-4 md:px-8 lg:px-12  ">
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-between items-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800">Featured Work</h2>
+            <h2 className="text-3xl font-bold dark:text-white text-gray-800">
+              Featured Work
+            </h2>
 
-            <motion.Link
+            <Link
               to="/projects"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="inline-block mt-6 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold shadow-lg hover:shadow-xl hover:from-indigo-600 hover:to-pink-600 transition-all duration-300"
+              className="border-2 border-gray-500 hover:scale-1 hover:border-gray-800 font-semibold dark:border-gray-200 dark:text-white dark:hover:border-white text-gray-800 rounded-lg relative py-3 px-8"
             >
-              View All Projects →
-            </motion.Link>
-
-            {/* < className="text-blue-600 hover:text-blue-800 flex items-center border-blue-400 border shadow-sm py-2 px-4 rounded-lg hover:border-blue-800">
-              View All <FiArrowRight className="ml-2" />
-            </> */}
+              View All
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -146,7 +144,7 @@ const Home = () => {
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
+                  <h3 className="text-xl text-gray-800 font-semibold mb-2">
                     {project.title}
                   </h3>
                   <p className="text-gray-600 mb-4">{project.description}</p>
