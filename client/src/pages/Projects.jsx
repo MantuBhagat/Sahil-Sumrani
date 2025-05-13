@@ -48,7 +48,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="bg-slate-200 dark:bg-gradient-to-r from-slate-900 to-slate-700 text-gray-100 dark:text-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-slate-200 dark:bg-gradient-to-r from-slate-900 to-slate-800 text-gray-100 dark:text-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-8 text-center">
           Projects

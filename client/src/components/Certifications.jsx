@@ -48,7 +48,7 @@ const Certifications = () => {
   ];
 
   return (
-    <div className="min-h-screenbg-slate-200 dark:bg-gradient-to-r from-slate-900 to-slate-700 text-gray-100 dark:text-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screenbg-slate-200 dark:bg-gradient-to-r from-slate-900 to-slate-800 text-gray-100 dark:text-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold dark:text-white text-gray-900 mb-8 text-center">
           Certifications

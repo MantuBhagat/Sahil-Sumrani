@@ -34,7 +34,7 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="  dark:bg-gradient-to-r rounded-bl from-slate-800 to-slate-700  dark:text-white text-gray-800"
+      className="  dark:bg-gradient-to-r rounded-bl from-slate-900 to-slate-800  dark:text-white text-gray-800"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
@@ -142,7 +142,7 @@ const Footer = () => {
 
           <motion.button
             onClick={scrollToTop}
-            className="p-2 bg-gray-800 rounded-lg text-white hover:bg-blue-600 transition-colors"
+            className="p-2 dark:bg-gray-200 dark:text-gray-900 bg-gray-800 rounded-lg text-white hover:bg-blue-600 transition-colors"
             whileHover={{ scale: 1.1 }}
           >
             <FiArrowUp className="w-5 h-5" />

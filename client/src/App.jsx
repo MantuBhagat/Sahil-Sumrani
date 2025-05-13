@@ -6,7 +6,8 @@ import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import Footer from "./components/Footer";
-import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Login from "./pages/login";
 import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 
@@ -21,7 +22,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
-          {/* <Route path="/signup" element={<Auth type="signup" />} /> */}
+          <Route path="/signup" element={<Signup />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />

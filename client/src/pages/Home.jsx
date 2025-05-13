@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FiCode, FiDatabase, FiLayout, FiArrowRight } from "react-icons/fi";
+import Certifications from "../components/Certifications";
 
 const skills = [
   { name: "HTML/CSS", level: 90, icon: <FiLayout className="w-6 h-6" /> },
@@ -49,28 +50,28 @@ const Home = () => {
     <div className="bg-slate-100 dark:bg-gradient-to-r from-slate-900 to-slate-800 text-gray-100 dark:text-gray-100">
       {/* Hero Section */}
       <motion.section
-        className="px-4 md:px-8 lg:px-12 pt-20 items-center"
+        className="px-4 md:px-8 lg:px-12  items-center"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl pt-20 my-auto mx-auto">
           <motion.div
             className="text-center md:text-left"
             variants={itemVariants}
           >
-            <h1 className=" font-semibold  md:text-5xl text-4xl text-gray-800 dark:text-gray-100 mb-4">
+            <h1 className=" font-semibold text-center md:text-6xl text-4xl text-gray-800 dark:text-gray-100 mb-4">
               Transforming Ideas into
               <span className="text-blue-600 font-bold dark:text-orange-500">
                 {" "}
                 Digital Reality
               </span>
             </h1>
-            <p className="text-xl  text-gray-600 dark:text-gray-200 mb-8 max-w-2xl mx-auto md:mx-0">
+            <p className="text-xl mb-10 text-gray-600 dark:text-gray-400 justify-center flex ">
               Full Stack Developer & Data Enthusiast with expertise in modern
               web technologies and data visualization solutions.
             </p>
-            <div className="flex flex-1 gap-4 items-center ">
+            <div className="flex  justify-center gap-4 items-center ">
               <Link
                 to="/projects"
                 className="border-2 border-blue-500 text-white hover:scale-1 dark:border-orange-500 font-semibold   dark:text-white dark:hover:border-white dark:bg-orange-500  bg-blue-500 rounded-lg relative py-3 px-8"
@@ -170,6 +171,10 @@ const Home = () => {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="py-16 px-4 md:px-8 lg:px-12">
+        <Certifications />
       </section>
 
       {/* Call to Action */}
